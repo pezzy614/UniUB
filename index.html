@@ -12,26 +12,26 @@ Running on:
 `
 
 // import bs
-const http = require("http");
-const { hostname } = require("os");
-const path = require("path");
-const express = require("express");
-const wisp = require("wisp-server-node");
-const cors = require("cors");
+const http = require("http
+const { hostname } = require("os
+const path = require("path
+const express = require("express
+const wisp = require("wisp-server-node
+const cors = require("cors
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
 // paths
-const pubDir = path.join(__dirname, "public");
-const { uvPath } = require("@titaniumnetwork-dev/ultraviolet");
-const { epoxyPath } = require("@mercuryworkshop/epoxy-transport");
-const { libcurlPath } = require("@mercuryworkshop/libcurl-transport");
-const { baremuxPath } = require("@mercuryworkshop/bare-mux/node");
+const pubDir = path.join(__dirname, "public
+const { uvPath } = require("@titaniumnetwork-dev/ultraviolet
+const { epoxyPath } = require("@mercuryworkshop/epoxy-transport
+const { libcurlPath } = require("@mercuryworkshop/libcurl-transport
+const { baremuxPath } = require("@mercuryworkshop/bare-mux/node
 
 const app = express();
 const server = http.createServer(app);
 
 app.use((req, res, next) => {
-	res.setHeader("Access-Control-Allow-Origin", "*");
+	res.setHeader("Access-Control-Allow-Origin", "*
 	res.setHeader(
 		"Access-Control-Allow-Methods",
 		"GET, POST, OPTIONS, PUT, DELETE"
@@ -40,9 +40,9 @@ app.use((req, res, next) => {
 		"Access-Control-Allow-Headers",
 		"Origin, X-Requested-With, Content-Type, Accept, Authorization"
 	);
-	res.setHeader("Access-Control-Expose-Headers", "Content-Length, X-Kuma-Revision");
-	res.setHeader("Access-Control-Allow-Credentials", "true");
-	res.setHeader("Service-Worker-Allowed", "/");
+	res.setHeader("Access-Control-Expose-Headers", "Content-Length, X-Kuma-Revision
+	res.setHeader("Access-Control-Allow-Credentials", "true
+	res.setHeader("Service-Worker-Allowed", "/
 	next();
 });
 
